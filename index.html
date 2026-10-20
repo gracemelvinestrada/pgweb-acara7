@@ -1,0 +1,48 @@
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 5px 10px;
+    }
+</style>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Kecamatan</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+            <th>Luas</th>
+            <th>Jumlah Penduduk</th>
+        </tr>
+    </thead>
+
+    <tbody id="tabelData"></tbody>
+</table>
+
+<script>
+    let data = [
+        ["Sukoharjo", 110.80424268093775, -7.673026347599157, 46.82, 98044],
+        ["Nguter", 110.87287397704885, -7.728378730657123, 57.85, 57285],
+        ["Baki", 110.78029174735384, -7.604635200362342, 23.40, 70841],
+        ["Grogol", 110.81235517122303, -7.6018314654944685, 31.33, 121414],
+        ["Tawangsari", 110.78637080215626, -7.724605427637224, 39.32, 57815]
+    ];
+
+    let tabel = document.getElementById("tabelData");
+
+    data.forEach(function (row) {
+        tabel.innerHTML += `
+            <tr>
+                <td>${row[0]}</td>
+                <td>${row[1]}</td>
+                <td>${row[2]}</td>
+                <td>${row[3]}</td>
+                <td>${row[4]}</td>
+            </tr>
+        `;
+    });
+</script>
